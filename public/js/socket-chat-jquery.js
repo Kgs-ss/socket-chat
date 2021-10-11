@@ -10,8 +10,9 @@ const formEnviar = $('#formEnviar');
 const txtMensaje = $('#txtMensaje');
 const chatBox = $('#chatBox');
 const barra = document.querySelector('#cuadroTxt');
+const tituloSala = $('#tituloSala');
 
-const renderizarUsuarios = (  personas ) => {
+const renderizarUsuarios = ( personas ) => {
 
     console.log( personas );
 
@@ -29,7 +30,7 @@ const renderizarUsuarios = (  personas ) => {
                 </li>`;
 
     }
-
+    tituloSala.html(`Sala de ${ paramsJ.get('sala')}`)
     divUsuarios.html(html);
 
 }
